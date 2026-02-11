@@ -1,0 +1,41 @@
+/* אזור פתיחה – על כל הרוחב */
+/* Baner.css */
+.first {
+    width: 100%;
+    height: 400px;
+    /* ניתן לשנות לפי הצורך */
+    background-image: url("/public/layered.png");
+    background-size: cover;
+    /* מתיחה כדי למלא את כל המרחב */
+    background-position: top center;
+    background-repeat: no-repeat;
+    /* לא לחזור על התמונה */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* טקסט לבן על רקע כהה */
+    text-align: center;
+
+      background-position: left center;
+
+
+    grid-column: 1 / -1;
+    background-color: #ebe6dc;
+    text-align: center;
+    margin: 0 !important;
+
+}
+
+.first h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.first h2 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #9e9999;
+}

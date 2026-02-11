@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: 'fredoka', sans-serif;
+  background-color: #fff9f5;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* עוטף ראשי */
+.all-app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+
+  gap: 32px;
+}
+
+/* סקשנים כלליים */
+.all-app>div {
+  background-color: #ffffff;
+  margin: 32px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* רשימה */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+}
+
+
+li {
+  background-color: #f4f1eb; /* אותו צבע של הרקע */
+  padding: 16px 20px 32px;
+  border-radius: 12px;
+
+  position: relative;
+  display: flex;
+  align-items: center;      /* מרכז אנכית */
+  justify-content: center;  /* מרכז אופקית */
+
+  text-align: center;   
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+li .li-icon {
+  position: absolute;
+  bottom: -16px; /* מתחת ל-li */
+  left: 50%;      /* במרכז */
+  transform: translateX(-50%);
+  
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+  font-size: 18px; /* מתאים ל-React Icon */
+
+  z-index: 1;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+
+  bottom: -16px;        /* יוצא קצת החוצה */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 36px;
+  height: 36px;
+  background-color: #ffffff;
+
+  border-radius: 8px;   /* ריבוע מעוגל */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+
+/* המלצות */
+.all-recommendations,
+.all-examples {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+
+.recommendations p,
+.examples p {
+  border: solid 2px #f4f1eb;
+  padding: 20px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+/* דוגמאות */
+.examples {
+  grid-column: 1 / -1;
+  background-color: #ebe6dc;
+}
+
+.examples p {
+  margin-bottom: 20px;
+}
+
+/* כותרות */
+h1,
+h2 {
+  color: #1f1f1f;
+}
+
+/* רספונסיבי */
+@media (max-width: 900px) {
+  .all-app {
+    grid-template-columns: 1fr;
+  }
+
+  .all-app>div {
+    padding: 24px;
+  }
+}
